@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!--Navbar Top -->
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="nav-link active" href="index.html">Home</a> <a class="nav-link disabled" href="#">Disabled link</a>
+	</nav>
+
+	<!-- Main Container -->
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<!--Login Form Group  -->
+				<form>
+					<div class="form-group mb-2">
+						<label for="emailInput">Email</label> <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelpId"
+						 placeholder="Email">
+					</div>
+					<div class="form-group mb-2">
+						<label for="passInput">Password</label> <input type="password" class="form-control" id="passInput" placeholder="Password">
+						<small id="emailHelpId" class="form-text text-muted"><a href="resetPass.html">Forgot Password</a></small>
+					</div>
+					<button type="submit" id="login" class="btn btn-primary mb-2">Login</button>
+					<a class="btn btn-primary mb-2" href="./createUser.html" role="button">Register</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<nav class="navbar fixed-bottom ">
+		<a class="nav-link active" href="#">Imprint</a> <a class="nav-link" href="#">Data Protection</a>
+	</nav>
+	<script src="./js/SHA-256.js"></script>
+	<script src="./js/CookieDater.js"></script>
+	<script src="./js/LoginAuth.js"></script>
+	<script>
+		$(document).ready(function (e) {
+
+			$("#login").click(function (e) {
+				e.preventDefault()
+				postData(getData());
+			});
+		});
+	</script>
+</body>
+
+
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Title</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</head>
+</head>
+
+<body>
+	<!--Navbar Top -->
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="nav-link active" href="index.html">Home</a> <a
+			class="nav-link disabled" href="#">Disabled link</a>
+	</nav>
+
+	<!-- Main Container -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-sm-12">
+				<!--Login Form Group  -->
+				<form>
+					<div class="form-group mb-2">
+						<label for="emailInput">Email</label> <input type="email"
+							class="form-control" id="user-email"
+							aria-describedby="emailHelpId" placeholder="Email">
+					</div>
+					<div class="form-group mb-2">
+						<label for="passInput">Password</label> <input type="password"
+							class="form-control mb-1" id="user-pass1" placeholder="Password">
+						<input type="password" class="form-control" id="user-pass2"
+							placeholder="Confirm Password">
+					</div>
+					<div class="form-group mb-2">
+						<label for="nameInput">Name</label> <input type="text"
+							class="form-control" id="nameInput" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<label for="langSelect">Launguage select</label> <select
+							class="form-control" id="langSelect">
+							<option>English</option>
+							<option>Deutsch</option>
+							<option>Español</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-primary mb-2"
+						id="register-btn">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<nav class="navbar fixed-bottom ">
+		<a class="nav-link active" href="#">Imprint</a> <a class="nav-link"
+			href="#">Data Protection</a>
+	</nav>
+	<!-- Page Scripts -->
+	<script src="./js/CookieDater.js"></script>
+	<script src="./js/Authorization.js"></script>
+	<script>
+		$(document).ready(function() {
+			var page = location.href.split("/").slice(-1);
+			authorizePage(page);
+		});
+	</script>
+</body>
+
+</html>

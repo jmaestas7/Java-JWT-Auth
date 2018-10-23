@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--Navbar Top -->
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="nav-link active" href="dashboard.html">Home</a> <a
+			class="nav-link" href="#">My Cart <i class="fas fa-shopping-cart"></i></a>
+	</nav>
+
+	<!-- Main Container -->
+	<div class="container">
+		<div class="container">
+			<div class="row">
+				<a href="personalSettings.html">
+					<div class="col-sm">Settings</div>
+				</a>
+				<a href="personalSettings.html">
+					<div class="col-sm">Create User</div>
+				</a>
+				<a href="licenseOverview.html">
+					<div class="col-sm">Licenses</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<nav class="navbar fixed-bottom">
+		<a class="nav-link active" href="#">Imprint</a> <a class="nav-link"
+			href="#">Data Protection</a>
+	</nav>
+</body>
+<script src="./js/CookieDater.js"></script>
+<script src="./js/Authorization.js"></script>
+<script>
+	$(document).ready(function() {
+		var page = location.href.split("/").slice(-1);
+		authorizePage(page);
+	});
+</script>
+</html>
